@@ -1,1 +1,5 @@
-kkkkall ceredintails is added
+#!/bin/bash
+echo "welcome to jenkins integration"
+echo
+a='AKHILESH'
+echo "hello, my name is $a"
