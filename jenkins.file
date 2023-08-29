@@ -1,4 +1,3 @@
-
 #!/bin/bash
 echo "welcome to jenkins integration"
 echo
