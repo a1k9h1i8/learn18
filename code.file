@@ -1,0 +1,44 @@
+#!/bin/bash
+#this code help us tocreate the new user on the local system
+#you will be prompted to enter the username (login) , person name and password
+#username password and host name will be displayed at the end of the project 
+
+
+if [[ "${UID}" -ne 0 ]]
+then
+       echo "please run with sudo or root"
+exit 1
+
+fi
+
+#2 commaduse to write the user name
+echo "please enter the username to create:"
+read  USER_NAME
+
+#3 get the real name 
+echo "please enter the sir name means fullname:"
+read COMMENT
+
+#4 commad use to enter the password
+echo "please enter the password:"
+read PASSWORD
+echo "hello, this is my $USER_NAME this is my official sir name that is $COMMENT this is my secret password $PASSWORD:"
+
+tinf the username
+useradd -c "${COMMENT}" -m ${USER_NAME}
+
+
+#7 creating the password
+echo "${PASSWORD}" | passwd --stdin ${USER_NAME}
+
+
+#7 forceing the user to change the password
+passwd -e "${USER_NAME}"
+
+#8 displaying the username password and host
+echo
+echo " $USER_NAME"
+echo
+echo " $PASSWORD"   
+echo
+echo " $HOSTNAME"
