@@ -1,0 +1,17 @@
+pipeline{
+    agent any
+
+    stages{
+        stage ('build'){
+            steps{
+                sh "echo build is success"
+            }
+        }
+    }
+}
+stage ('Todays date'){
+    steps{
+        sh  echo "Todays date"
+        date
+    }
+}
