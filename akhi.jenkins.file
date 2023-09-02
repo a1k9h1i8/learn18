@@ -9,9 +9,3 @@ pipeline{
         }
     }
 }
-stage ('Todays date'){
-    steps{
-        sh  echo "Todays date"
-        date
-    }
-}
