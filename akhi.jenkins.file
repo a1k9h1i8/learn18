@@ -9,8 +9,4 @@ pipeline{
         }
     }
 }
-stage ('calender'){
-    steps{
-        sh  echo "calender"
-    }
-}
+
